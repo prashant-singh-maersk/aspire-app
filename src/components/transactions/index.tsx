@@ -1,6 +1,9 @@
 import React from 'react';
 import FileStorage from 'icons/business-and-finance.svg';
 import { getTransactionIcon } from 'core/transaction-icon-map';
+import { TransactionContainer, TransactionLogoContainer, TransactionLogo } from './style';
+import { TransactionType } from 'core/constants';
+
 
 interface TransactionProps {
   name: string;
@@ -20,43 +23,26 @@ const Transaction: React.FC<TransactionProps> = ({
   bgColor,
 }) => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        marginBottom: '10px',
-        alignItems: 'flex-start',
-      }}
-    >
-      <div style={{ marginRight: '10px' }}>
+    <TransactionContainer>
+      <TransactionLogoContainer color={bgColor ?? '#009DFF1A'}>
+        <TransactionLogo src={getTransactionIcon(icon)} alt="icon" />
+      </TransactionLogoContainer>
+      <div className="info-container">
+        <div className='flex-between'>
+        <div >
+          <div className='name'>{name}</div>
+          <div className="date" >{date}</div>
+        </div>
         <div
+            className='amount'
           style={{
-            width: '48px',
-            height: '48px',
-            borderRadius: '50%',
-            backgroundColor: bgColor,
+            fontWeight: 700,
+            fontSize: '14px',
+            color: type === TransactionType.credit ? 'var(--primary-default)' : '#222222',
           }}
         >
-          <img
-            style={{
-              width: '16px',
-              height: '16px',
-              position: 'relative',
-              top: '16px',
-              left: '16px',
-            }}
-            src={getTransactionIcon(icon)}
-            alt="icon"
-          />
+          {type === TransactionType.credit ? '+' : '-'} {amount}
         </div>
-      </div>
-      <div style={{ flexGrow: 1 }}>
-        <strong
-          style={{ fontWeight: '500', fontSize: '14px', marginBottom: '4px' }}
-        >
-          {name}
-        </strong>
-        <div style={{ color: '#AAAAAA', marginTop: '4px', fontSize: '13px' }}>
-          {date}
         </div>
         <div
           className="flex"
@@ -84,24 +70,19 @@ const Transaction: React.FC<TransactionProps> = ({
             />
           </div>
           <div
-            style={{ color: '#325BAF', fontWeight: 'bold', fontSize: '12px' }}
+            style={{
+              color: '#325BAF',
+              fontWeight: 'bold',
+              fontSize: '12px',
+            }}
           >
-            {type === 'CREDIT'
+            {type === TransactionType.credit
               ? 'Refund on debit card'
               : 'Charged to debit card'}
           </div>
         </div>
       </div>
-      <div
-        style={{
-          fontWeight: 700,
-          fontSize: '14px',
-          color: type === 'CREDIT' ? 'var(--primary-default)' : 'black',
-        }}
-      >
-        {type === 'CREDIT' ? '+' : '-'} {amount}
-      </div>
-    </div>
+    </TransactionContainer>
   );
 };
 

@@ -37,6 +37,11 @@
     }
   }
 
+  .flex-between{
+    display:flex;
+    justify-content: space-between;
+  }
+
   .carousel .control-dots{
     bottom: -40px;
   }
@@ -53,4 +58,6 @@
     border-radius: 8px;
     background: var(--primary-default);
   }
-  
+  .carousel .slide img{
+    width: auto;
+  }

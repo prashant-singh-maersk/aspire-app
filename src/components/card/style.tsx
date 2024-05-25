@@ -56,6 +56,7 @@ export const CardContainer = styled.div<{ freezed: boolean }>`
     display: flex;
     font-weight: bold;
     font-size: 13px;
+    margin-bottom:4px;
   }
 
   .masked-cvv {

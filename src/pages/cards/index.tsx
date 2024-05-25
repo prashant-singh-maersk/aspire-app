@@ -5,8 +5,8 @@ import HeaderComponent from './header';
 import BodyComponent from './body-component';
 import Accordion from 'components/accordian';
 import Carousel from './cards-carousel';
-import AddCard from './add-card';
-import TransactionsList from './transactions';
+import AddCard from './add-card-modal';
+import TransactionsList from 'components/transactions';
 
 import { getCardsApi, addCardApi } from 'core/api';
 
