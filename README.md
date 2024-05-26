@@ -6,14 +6,13 @@ Please find some information below to help you understand the features that I ha
 
 For easy walkthrough, I will divide the points in these major categories.
 
+- Getting Started
+- Deployment
 - Functional specifications
 - Non Functional specifications
 - Code Structure
 - Tech choices
 - Further Improvements which could be done later
-- Performance improvements
-- Getting Started
-- Deployment
 
 Apart from developing the features, I have also paid attention to :-
 
@@ -22,38 +21,50 @@ Apart from developing the features, I have also paid attention to :-
 - Using Typescript
 - Code readability and maintainability
 - pixel perfect UI/UX and styling
-- Performance improvements
+- naming conventions
 
-# Functional details (that I have implemented)
+# Getting Started
+
+- open a terminal & move to the root directory of the project
+- run `npm install`to install the deps
+- run `npm start` to start the server
+- visit [http://localhost:3000](http://localhost:3000/) to see the app running
+
+# Deployment
+
+- Any changes pushed will automatically be deployed through netlify
+- visit [Aspire App](https://aspire-app-challenge.netlify.app/) to see the app in action.
+
+# Functional specifications
 
 - Created a simple single-page application as shown in the screenshot image
 - Created a navigation sidebar which has different options like Dashboard logo and links like Home, Cards etc.
-- Add new card using a modal form- form takes all information about the card
-- Freeze/Unfreeze card 
+- Add new card using a modal form - form takes all information about the card
+- User can o5t5tggggtrttcFreeze/Unfreeze card 
 - Made Cards as the default route
 - Created placeholder pages for other routes and a 404 page
 
-# Non Functional specifications (that I have implemented)
+# Non Functional specifications
 
 - Tested on different browsers(Chrome, Firefox, Edge) and OS (Mac, Windows) to ensure it is working fine
 - Use of React Hooks: Used React hooks like useEffect, useState etc.
 - Clean code: Tried to write a clean and indented code (which follows Prettier code formatting)
 - Add required validation for form
 - Mock data usage wherever possible and use local storage for initial rendering of cards
-- proper naming conentions used 
+- proper naming conentions 
 
 # Code Structure
 
 The project has the following directory structure:
 
-- `ASPIRE-APP/`
+- `aspire-app/`
   - `node_modules/`: Contains all the dependencies of the project.
   - `public/`: Contains static files and assets.
   - `src/`: Contains all the source code for the project.
     - `components/`: Contains reusable components like Accordion, AppLayout, Modal, SideBar, and Tabs.
     - `icons/`: Contains all the icon files used in the project. Icons not uploaded to cdn goes here.
     - `pages /`: Contains different pages like Cards, Credit, Home, Payments, and Settings.
-    - - `core /`: Contains core files required for project like constants, helper functions, api calls, etc
+    - `core /`: Contains core files required for project like constants, helper functions, api calls, etc
     - `App.css`: Contains global styles.
     - `App.tsx`: The main App component. Contains routes.
     - `index.css`: Contains styles for the index file.
@@ -78,20 +89,11 @@ The project has the following directory structure:
 
 # Further Improvements/Changes which could be done later
 
-- Add more robust validation for forms.
 - Add unit test cases
+- add integration tests
+- add husky hooks 
+- Add more robust validation for forms.
 - Move inline styles to styled component
-- add husky hooks
 - error handling like 404, 500 pages, api error handling
+- add eslint, prettier config
 
-# Getting Started
-
-- open a terminal & move to the root directory of the project
-- run `npm install`to install the deps
-- run `npm start` to start the server
-- visit [http://localhost:3000](http://localhost:3000/) to see the app running
-
-# Deployment
-
-- Any changes pushed will automatically be deployed through netlify
-- visit [https://aspire-app-challenge.netlify.app/]() to see the app in action.
