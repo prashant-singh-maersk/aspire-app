@@ -1,8 +1,8 @@
-import { breakpoint } from "core/constants";
+import { BREAKPOINT } from "core/constants";
 import styled from "styled-components";
 
 export const StyledBox = styled.div`
-  @media (min-width: ${breakpoint}) {
+  @media (min-width: ${BREAKPOINT}) {
     padding: 40px;
     border-radius: 6px;
     border: 0.5px solid #FCFCFC;

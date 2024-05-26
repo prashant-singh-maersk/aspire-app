@@ -1,4 +1,4 @@
-import { breakpoint } from "core/constants";
+import { BREAKPOINT } from "core/constants";
 import styled from "styled-components";
 
 export const CardContainer = styled.div<{ freezed: boolean }>`
@@ -85,7 +85,7 @@ export const CardContainer = styled.div<{ freezed: boolean }>`
         z-index: -1;
         background: white;
 
-    @media (min-width: ${breakpoint}) {
+    @media (min-width: ${BREAKPOINT}) {
       background: transparent;
     }
     }

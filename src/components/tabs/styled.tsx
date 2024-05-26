@@ -1,11 +1,11 @@
-import { breakpoint } from "core/constants";
+import { BREAKPOINT } from "core/constants";
 import styled from "styled-components";
 
 export const StyledTabContainer = styled.div`
   display: flex;
   gap: 32px;
   padding: 32px 24px 12px;
-  @media (min-width: ${breakpoint}) {
+  @media (min-width: ${BREAKPOINT}) {
     padding: 32px 0 12px;
   }
 `;
@@ -22,7 +22,7 @@ export const StyledTab = styled.div`
     border: none;
     color:#fff;
     background: transparent;
-    @media (min-width: ${breakpoint}) {
+    @media (min-width: ${BREAKPOINT}) {
       color:#222222;
     }
     opacity:0.3;

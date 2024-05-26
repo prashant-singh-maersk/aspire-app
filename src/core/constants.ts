@@ -1,6 +1,6 @@
 export const TAB_LIST = [
-  { id: 'MY_DEBIT_CARDS', label: 'My debit cards' },
-  { id: 'ALL_COMPANY_CARDS', label: 'All company cards' },
+  { id: 'my', label: 'My debit cards' },
+  { id: 'all', label: 'All company cards' },
 ];
 
 export const INITIAL_CARDS = [
@@ -27,7 +27,7 @@ export const INITIAL_CARDS = [
   },
 ];
 
-export const SAMPLE_TRANSACTION = [
+export const TRANSACTION = [
   { id:1,
     name: 'Hamleys',
     date: '20 May 2022',
@@ -65,8 +65,8 @@ export const SAMPLE_TRANSACTION = [
   },
 ];
 
-export const breakpoint = '1024px';
-export const enum TransactionType {
+export const BREAKPOINT = '1024px';
+export const enum TRANSACTION_TYPE {
   credit = 'CREDIT',
   debit = 'DEBIT',
 }

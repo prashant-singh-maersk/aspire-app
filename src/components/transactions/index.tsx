@@ -2,7 +2,7 @@ import React from 'react';
 import FileStorage from 'icons/business-and-finance.svg';
 import { getTransactionIcon } from 'core/transaction-icon-map';
 import { TransactionContainer, TransactionLogoContainer, TransactionLogo } from './style';
-import { TransactionType } from 'core/constants';
+import { TRANSACTION_TYPE } from 'core/constants';
 
 
 interface TransactionProps {
@@ -39,10 +39,10 @@ const Transaction: React.FC<TransactionProps> = ({
           style={{
             fontWeight: 700,
             fontSize: '14px',
-            color: type === TransactionType.credit ? 'var(--primary-default)' : '#222222',
+            color: type === TRANSACTION_TYPE.credit ? 'var(--primary-default)' : '#222222',
           }}
         >
-          {type === TransactionType.credit ? '+' : '-'} {amount}
+          {type === TRANSACTION_TYPE.credit ? '+' : '-'} {amount}
         </div>
         </div>
         <div
@@ -77,7 +77,7 @@ const Transaction: React.FC<TransactionProps> = ({
               fontSize: '12px',
             }}
           >
-            {type === TransactionType.credit
+            {type === TRANSACTION_TYPE.credit
               ? 'Refund on debit card'
               : 'Charged to debit card'}
           </div>

@@ -1,46 +1,97 @@
-# Getting Started with Create React App
+# ASPIRE-APP - Prashant Shekhar Singh
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dear Aspire team,
 
-## Available Scripts
+Please find some information below to help you understand the features that I have developed, my thought process behind designing the project and why I have made certain choices.
 
-In the project directory, you can run:
+For easy walkthrough, I will divide the points in these major categories.
 
-### `npm start`
+- Functional specifications
+- Non Functional specifications
+- Code Structure
+- Tech choices
+- Further Improvements which could be done later
+- Performance improvements
+- Getting Started
+- Deployment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Apart from developing the features, I have also paid attention to :-
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Best practices and clean code
+- Standard files and folder structure
+- Using Typescript
+- Code readability and maintainability
+- pixel perfect UI/UX and styling
+- Performance improvements
 
-### `npm test`
+# Functional details (that I have implemented)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Created a simple single-page application as shown in the screenshot image
+- Created a navigation sidebar which has different options like Dashboard logo and links like Home, Cards etc.
+- Add new card using a modal form- form takes all information about the card
+- Freeze/Unfreeze card 
+- Made Cards as the default route
+- Created placeholder pages for other routes and a 404 page
 
-### `npm run build`
+# Non Functional specifications (that I have implemented)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tested on different browsers(Chrome, Firefox, Edge) and OS (Mac, Windows) to ensure it is working fine
+- Use of React Hooks: Used React hooks like useEffect, useState etc.
+- Clean code: Tried to write a clean and indented code (which follows Prettier code formatting)
+- Add required validation for form
+- Mock data usage wherever possible and use local storage for initial rendering of cards
+- proper naming conentions used 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Code Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project has the following directory structure:
 
-### `npm run eject`
+- `ASPIRE-APP/`
+  - `node_modules/`: Contains all the dependencies of the project.
+  - `public/`: Contains static files and assets.
+  - `src/`: Contains all the source code for the project.
+    - `components/`: Contains reusable components like Accordion, AppLayout, Modal, SideBar, and Tabs.
+    - `icons/`: Contains all the icon files used in the project. Icons not uploaded to cdn goes here.
+    - `pages /`: Contains different pages like Cards, Credit, Home, Payments, and Settings.
+    - - `core /`: Contains core files required for project like constants, helper functions, api calls, etc
+    - `App.css`: Contains global styles.
+    - `App.tsx`: The main App component. Contains routes.
+    - `index.css`: Contains styles for the index file.
+    - `index.tsx`: The entry point of the project.
+  - `.gitignore`: Tells git which files it should not track nor maintain a version history for.
+  - `package.json`: Lists the packages your project depends on, specifies versions of a package that your project can use using semantic versioning rules.
+  - `README.md`: The file you are currently reading.
+  - `tsconfig.json`: Specifies the root files and the compiler options required to compile the project.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Techs used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Used React.js functional components
+- Used react-router v6 for routing for navigating through different pages.
+- Used styled-components for styling needs
+- Used Typescript for static typing, better IDE support, ESNext features, interfaces
+- Used Netlify for deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# Unit testing
 
-## Learn More
+- Not included due to time constraints.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Further Improvements/Changes which could be done later
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add more robust validation for forms.
+- Add unit test cases
+- Move inline styles to styled component
+- add husky hooks
+- error handling like 404, 500 pages, api error handling
+
+# Getting Started
+
+- open a terminal & move to the root directory of the project
+- run `npm install`to install the deps
+- run `npm start` to start the server
+- visit [http://localhost:3000](http://localhost:3000/) to see the app running
+
+# Deployment
+
+- Any changes pushed will automatically be deployed through netlify
+- visit [https://aspire-app-challenge.netlify.app/]() to see the app in action.

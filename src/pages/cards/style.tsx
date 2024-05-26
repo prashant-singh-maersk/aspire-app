@@ -1,4 +1,4 @@
-import { breakpoint } from 'core/constants';
+import { BREAKPOINT } from 'core/constants';
 import styled from 'styled-components';
 
 export const StyledHeaderComponent = styled.div`
@@ -6,7 +6,7 @@ export const StyledHeaderComponent = styled.div`
   justify-content: space-between;
   padding: 20px 24px 12px;
   align-items: end;
-  @media (min-width: ${breakpoint}) {
+  @media (min-width: ${BREAKPOINT}) {
     padding: 20px 0 12px;
   }
 
@@ -15,7 +15,7 @@ export const StyledHeaderComponent = styled.div`
     flex-direction: column;
     gap: 12px;
     color: #fff;
-    @media (min-width: ${breakpoint}) {
+    @media (min-width: ${BREAKPOINT}) {
       color: #222222;
     }
   }
@@ -32,7 +32,7 @@ export const StyledHeaderComponent = styled.div`
     font-weight: bold;
     font-size: 24px;
     color: #fff;
-    @media (min-width: ${breakpoint}) {
+    @media (min-width: ${BREAKPOINT}) {
       color: #222222;
     }
   }
@@ -69,14 +69,14 @@ export const StyledMyDebitCards = styled.div`
   justify-content: space-between;
   flex-direction: column;
 
-  @media (min-width: ${breakpoint}) {
+  @media (min-width: ${BREAKPOINT}) {
     flex-direction: row;
     gap: 52px;
   }
 
   > div:first-child {
     width: 100%;
-    @media (min-width: ${breakpoint}) {
+    @media (min-width: ${BREAKPOINT}) {
       width: 45%;
     }
   }
@@ -85,7 +85,7 @@ export const StyledMyDebitCards = styled.div`
     width: 100%;
     background: #fff;
     padding: 24px;
-    @media (min-width: ${breakpoint}) {
+    @media (min-width: ${BREAKPOINT}) {
       width: 55%;
       padding: 0;
     }
@@ -101,7 +101,7 @@ export const StyledAction = styled.div`
   border-radius: 24px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  @media (min-width: ${breakpoint}) {
+  @media (min-width: ${BREAKPOINT}) {
     border-radius: 8px;
   }
 
@@ -140,7 +140,7 @@ export const CarouselContainer = styled.div`
 export const CardContainer = styled.div`
   padding: 0 24px;
   margin-top: 12px;
-  @media (min-width: ${breakpoint}) {
+  @media (min-width: ${BREAKPOINT}) {
     padding: 0px;
   }
 `;

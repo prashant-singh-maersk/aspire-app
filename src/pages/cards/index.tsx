@@ -10,7 +10,7 @@ import TransactionsList from 'components/transactions';
 
 import { getCardsApi, addCardApi } from 'core/api';
 
-import { SAMPLE_TRANSACTION, TAB_LIST } from 'core/constants';
+import { TRANSACTION, TAB_LIST } from 'core/constants';
 
 import { StyledMyDebitCards } from './style';
 import { CardProps } from 'components/card';
@@ -56,7 +56,7 @@ const Cards: React.FC = () => {
             <div className="flex flex-column gap-6">
               <Accordion title="Card Details">Card Details</Accordion>
               <Accordion title="Recent Transactions" isOpenDefaultState={true}>
-                <TransactionsList transactions={SAMPLE_TRANSACTION} />
+                <TransactionsList transactions={TRANSACTION} />
               </Accordion>
             </div>
           </StyledMyDebitCards>
