@@ -18,7 +18,7 @@
 - Created a simple single-page application as shown in the screenshot image
 - Created a navigation sidebar which has different options like Dashboard logo and links like Home, Cards etc.
 - Add new card using a modal form - form takes all information about the card
-- User can o5t5tggggtrttcFreeze/Unfreeze card 
+- User can Freeze/Unfreeze card 
 - Made Cards as the default route
 - Created placeholder pages for other routes and a 404 page
 
@@ -74,4 +74,5 @@ The project has the following directory structure:
 - Move inline styles to styled component
 - error handling like 404, 500 pages, api error handling
 - add eslint, prettier config
+- use tailwind for css (initially thought of using it but could not due to time constraint)
 
