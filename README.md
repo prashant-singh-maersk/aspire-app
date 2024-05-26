@@ -1,27 +1,5 @@
 # ASPIRE-APP - Prashant Shekhar Singh
 
-Dear Aspire team,
-
-Please find some information below to help you understand the features that I have developed, my thought process behind designing the project and why I have made certain choices.
-
-For easy walkthrough, I will divide the points in these major categories.
-
-- Getting Started
-- Deployment
-- Functional specifications
-- Non Functional specifications
-- Code Structure
-- Tech choices
-- Further Improvements which could be done later
-
-Apart from developing the features, I have also paid attention to :-
-
-- Best practices and clean code
-- Standard files and folder structure
-- Using Typescript
-- Code readability and maintainability
-- pixel perfect UI/UX and styling
-- naming conventions
 
 # Getting Started
 
