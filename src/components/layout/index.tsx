@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 import SideBar from "components/side-bar";
 
-import { AppLayoutContainer, ChildContainer,SideBarContainer } from "./styled";
+import { AppLayoutContainer, ChildContainer,SideBarContainer } from "./style";
 
 const AppLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (

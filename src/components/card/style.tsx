@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div<{ freezed: boolean }>`
   color: #fff;
+  padding: 0 2px;
 
   .credit-card {
     background: ${(props) => (props.freezed ?'var(--freezed-color)' : 'var(--primary-default)')};
@@ -35,10 +36,6 @@ export const CardContainer = styled.div<{ freezed: boolean }>`
   }
 
   .card-number {
-  }
-
-  .unmasked,
-  .masked {
     letter-spacing: 2px;
     display: flex;
     gap: 20px;
@@ -48,19 +45,20 @@ export const CardContainer = styled.div<{ freezed: boolean }>`
     margin-bottom: 16px;
   }
 
-  .thru {
+  .expiry {
     margin-right: 80px;
   }
 
-  .thru-and-cvv {
+  .expiry-and-cvv {
     display: flex;
     font-weight: bold;
     font-size: 13px;
     margin-bottom:4px;
   }
 
-  .masked-cvv {
+  .cvv {
     font-size: 13px;
+    letter-spacing: 2px;
   }
 
   .show-hide-btn {

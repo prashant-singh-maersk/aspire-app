@@ -8,30 +8,13 @@ import AddGpay from 'icons/GPay.svg';
 import ReplaceCard from 'icons/Replace card.svg';
 import CancelCard from 'icons/Deactivate card.svg';
 import { Carousel as ResponsiveCarousel } from 'react-responsive-carousel';
-import { CarouselContainer, StyledAction,CardContainer } from './style';
+import { CarouselContainer, StyledAction,CardContainer } from '../style';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Card from 'components/card/card';
-
-interface Cards {
-  url?: string;
-  id?: string | number;
-  name?: string;
-  bank?: string;
-  bankLogo?: string;
-  type?: string; // visa or mastercard etc
-  typeLogo?: string;
-  maskedNumber?: string;
-  maskedCvv?: string;
-  color?: string;
-  thru?: string;
-  unMaskedNumber?: string;
-  unMaskedCvv?: string;
-  freezed?: boolean;
-}
+import Card, { CardProps } from 'components/card';
 
 interface CarouselProps {
-  cards: Cards[];
-  setCards: React.Dispatch<React.SetStateAction<Cards[]>>;
+  cards: CardProps[];
+  setCards: React.Dispatch<React.SetStateAction<CardProps[]>>;
 }
 
 const Carousel: React.FC<CarouselProps> = ({ cards, setCards }) => {

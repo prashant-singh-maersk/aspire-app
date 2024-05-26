@@ -13,22 +13,14 @@
   --neutral-inverse: #222222;
 
   --freezed-color: #9E9E9E;
+
+  --font-family: 'Open Sans';
+  --border-radius: 8px;
 }
-
-
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-family);
 }
 
 * {
@@ -63,7 +55,6 @@ button {
 input:focus-visible,
 input:active {
   outline: none;
-  border: none;
 }
 
 input:disabled {

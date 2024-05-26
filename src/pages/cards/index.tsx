@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import Tabs from 'components/tabs';
-import HeaderComponent from './header';
-import BodyComponent from './body-component';
+import HeaderComponent from './templates/header';
+import Box from 'components/box';
 import Accordion from 'components/accordian';
-import Carousel from './cards-carousel';
-import AddCard from './add-card-modal';
+import Carousel from './templates/cards-carousel';
+import AddCard from './templates/add-card-modal';
 import TransactionsList from 'components/transactions';
 
 import { getCardsApi, addCardApi } from 'core/api';
@@ -13,29 +13,13 @@ import { getCardsApi, addCardApi } from 'core/api';
 import { SAMPLE_TRANSACTION, TAB_LIST } from 'core/constants';
 
 import { StyledMyDebitCards } from './style';
+import { CardProps } from 'components/card';
 
-interface CardsProps {
-  url?: string;
-  id?: string | number;
-  name?: string;
-  bank?: string;
-  bankLogo?: string;
-  type?: string; // visa or mastercard etc
-  typeLogo?: string;
-  maskedNumber?: string;
-  maskedCvv?: string;
-  color?: string;
-  thru?: string;
-  unMaskedNumber?: string;
-  unMaskedCvv?: string;
-  freezed?: boolean;
-}
 
 const Cards: React.FC = () => {
   const [activeTab, setActiveTab] = useState(TAB_LIST[0].id);
   const [showAddCardForm, setShowAddCardForm] = useState(false);
-
-  const [cardsState, setCardsState] = useState<CardsProps[]>([]);
+  const [cardsState, setCardsState] = useState<CardProps[]>([]);
 
   const onClickAddNew = () => {
     setShowAddCardForm(true);
@@ -63,7 +47,7 @@ const Cards: React.FC = () => {
     <div>
       <HeaderComponent onClickAddNew={onClickAddNew} />
       <Tabs tabs={TAB_LIST} active={activeTab} setActive={setActiveTab} />
-      <BodyComponent>
+      <Box>
         {activeTab === TAB_LIST[0].id && (
           <StyledMyDebitCards>
             <div>
@@ -78,7 +62,7 @@ const Cards: React.FC = () => {
           </StyledMyDebitCards>
         )}
         {activeTab === TAB_LIST[1].id && 'All Company card'}
-      </BodyComponent>
+      </Box>
       {showAddCardForm && (
         <AddCard
           onSubmit={handleSubmit}

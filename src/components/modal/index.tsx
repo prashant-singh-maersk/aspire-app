@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ModalContainer, ModalBody } from "./styled";
+import { ModalContainer, ModalBody } from "./style";
 
 interface ModalProps {
   isOpen: boolean;

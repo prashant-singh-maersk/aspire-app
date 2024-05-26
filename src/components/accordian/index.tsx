@@ -2,7 +2,7 @@ import React, { useState, ReactNode } from "react";
 
 import Arrow from "./../../icons/down-arrow.svg";
 
-import { StyledAccordion } from "./styled";
+import { StyledAccordion } from "./style";
 
 interface AccordionProps {
   title: string;

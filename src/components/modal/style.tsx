@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import { breakpoint } from 'core/constants';
+import styled from 'styled-components';
 
 export const ModalContainer = styled.div`
   position: fixed;
@@ -7,19 +8,22 @@ export const ModalContainer = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
 `;
 
 export const ModalBody = styled.div`
   position: relative;
   margin: 200px auto;
   padding: 40px 30px;
-  max-width: 440px;
+  max-width: 90%;
   background-color: #fff;
   border-radius: 12px;
+  @media (min-width: ${breakpoint}) {
+    max-width: 440px;
+  }
 
   .close {
     position: absolute;
-
     right: 12px;
     top: 12px;
     cursor: pointer;

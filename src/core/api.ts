@@ -1,31 +1,37 @@
-import { MOCK_CARD_CREATION_DATA } from "./constants";
+export interface CardDetails {
+  name: string;
+  cardNumber: string;
+  cvv: string;
+  expiryDate: string;
+}
 
 export const getCardsApi = () => {
-  // TODO: error handling
   return new Promise((resolve, reject) => {
-    const mockData = JSON.parse(localStorage.getItem("mockData") ?? '');
+    const mockData = JSON.parse(localStorage.getItem('mockData') ?? "{}");
     resolve(mockData);
   });
 };
 
-export const addCardApi = ({ name }: {name: string}) => {
-  // randomly generate and save card data
-  const randomIndex =
-    Math.floor(Math.random() * MOCK_CARD_CREATION_DATA.length - 1) + 1;
-  const randomCardDetails = MOCK_CARD_CREATION_DATA[randomIndex];
+export const addCardApi = ({
+  name,
+  cardNumber,
+  cvv,
+  expiryDate,
+}: CardDetails) => {
   const cardData = {
     id: `${Math.floor(Math.random() * 100) + 1}_${name}`,
     name,
-    ...randomCardDetails,
+    cardNumber,
+    cvv,
+    expiryDate,
   };
 
-  // TODO: error handling
   localStorage.setItem(
-    "mockData",
+    'mockData',
     JSON.stringify([
       { ...cardData },
-      ...JSON.parse(localStorage.getItem("mockData") ?? ''),
+      ...JSON.parse(localStorage.getItem('mockData') ?? ''),
     ])
   );
-  return Promise.resolve(true); // for mock purpose , always returning true
+  return Promise.resolve(true);
 };

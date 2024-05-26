@@ -62,14 +62,7 @@ export const StyledHeaderComponent = styled.div`
   }
 `;
 
-export const StyledBodyComponent = styled.div`
-  @media (min-width: ${breakpoint}) {
-    padding: 40px;
-    border-radius: 6px;
-    border: 0.5px solid #FCFCFC;
-    box-shadow: 0px 2px 12px 2px #00000014;
-  }
-`;
+
 
 export const StyledMyDebitCards = styled.div`
   display: flex;
@@ -153,9 +146,9 @@ export const CardContainer = styled.div`
 `;
 
 export const TitleModal = styled.div`
-  font-weight: bold;
+  font-weight: 600;
   font-size: 22px;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   color: var(--secondary-default);
 `;

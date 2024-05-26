@@ -2,7 +2,7 @@ import React from "react";
 
 import AddIcon from "icons/add.svg";
 
-import { StyledHeaderComponent } from "./style";
+import { StyledHeaderComponent } from "../style";
 
 interface HeaderProps {
   onClickAddNew: () => void;

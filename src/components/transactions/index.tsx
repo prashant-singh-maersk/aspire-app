@@ -12,6 +12,7 @@ interface TransactionProps {
   amount: string;
   icon: string;
   bgColor?: string;
+  id:number;
 }
 
 const Transaction: React.FC<TransactionProps> = ({
@@ -96,14 +97,14 @@ const TransactionsList: React.FC<TransactionsListProps> = ({
   return (
     <div>
       {transactions.map((transaction, index) => (
-        <>
-          <Transaction key={index} {...transaction} />
+        <React.Fragment key={transaction.id}>
+          <Transaction key={transaction.id} {...transaction} />
           {index !== transactions.length - 1 && (
             <hr
               style={{ borderTop: '1px solid #F5F5F5', marginBottom: '24px' }}
             />
           )}
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
